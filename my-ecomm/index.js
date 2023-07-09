@@ -46,20 +46,20 @@ descriptionContainer.appendChild(name);
 // product price
 
 const price=document.createElement("p");
-price.classList.add("card-price");
+price.classList.add("card-price","d-flex","align-end","gap-sm");
 price.innerText=`Rs. ${product.newPrice}`;
 
 const oldPrice=document.createElement("span");
-price.classList.add("price-strike-through");
-price.innerText=`Rs. ${product.oldPrice}`;
+oldPrice.classList.add("price-strike-through");
+oldPrice.innerText=`Rs. ${product.oldPrice}`;
 price.appendChild(oldPrice);
 
 
 const discount=document.createElement("span");
-price.classList.add("discount");
-price.innerText=`(${product.discount}% OFF`;
+discount.classList.add("discount");
+discount.innerText=`(${product.discount}% OFF`;
 price.appendChild(discount);
-
+descriptionContainer.appendChild(price);
 
 // Rating Container
  const ratings=document.createElement("p");
@@ -70,9 +70,42 @@ rating.innerText=product.rating;
 ratings.appendChild(rating);
 
 const star=document.createElement("span");
-star.classList.add("material-icons-outlined");
+star.classList.add("material-icons-outlined","star");
 star.innerText="star";
 ratings.appendChild(star);
+
+descriptionContainer.appendChild(ratings);
+
+cardDetailsContainer.appendChild(descriptionContainer);
+
+//  cta button
+const ctaButton=document.createElement("div");
+ctaButton.classList.add("cta-btn");
+const cartButton=document.createElement("button");
+cartButton.classList.add(
+    "button",
+     "btn-primary",
+     "btn-icon", 
+     "cart-btn" ,
+     "d-flex", 
+     "align-center", 
+     "justify-center", 
+     "gap" ,
+     "cursor", 
+     "btn-margin"
+);
+const cart=document.createElement("span");
+cart.classList.add("material-icons-outlined" ,"star");
+cart.innerText="shopping_cart";
+cartButton.appendChild(cart);
+
+const buttonText=document.createElement("span");
+buttonText.innerText="Add TO Cart";
+cartButton.appendChild(buttonText)
+
+
+ctaButton.appendChild(cartButton);
+cardDetailsContainer.appendChild(ctaButton);
 
 cardContainer.appendChild(imageContainer);
 cardContainer.appendChild(cardDetailsContainer);

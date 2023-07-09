@@ -4,39 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home | Ecomm App</title>
+    <title>home | Hayat Shop</title>
     <meta name="authro" description="Zaid Khan">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="d-flex wrap gap" id="products"></div>
-    <div class="card card-vertical d-flex direction-column relative shadow">
-        <div class="card-image-container">
-             <img class="card-image" src="https://uilight.netlify.app/assets/shoes.jpg" alt="shoes">
+    <header class="heading d-flex grow-shrink-basis align-center fixed top-0 left-0">
+        <div class="heading-title-icon d-flex  align-center">
+           
+            <h1 class="heading-title">
+                <a class="link" href="/">Hayat Shop</a>
+            </h1>
         </div>
-        <div class="card-details">
-             <div class="card-title">Premium Collection</div>
-             <div class="card-description">
-                  <p class="card-des">Men Sneakers</p>
-                  <p class="card-price">
-                     Rs. 1750
-                        <span class="price-strike-through">Rs. 2499</span>
-                     <span class="discount">(30% OFF)</span>
-                  </p>
-                  <p class="d-flex align-center">
-                    <span>4.8</span>
-                    <span class="material-icons-outlined star">star</span>
-                   
-                  </p>
-             </div>
-             <div class="cta-btn">
-                  <button class="button btn-primary btn-icon cart-btn d-flex                          align-center justify-center gap cursor btn-margin">
-                  <img src="/assets/cart-white.png" alt="cart"> 
-                    Add To Cart
-                  </button>
-             </div>
+        <div class="search-box-container relative">
+            <input class="search-box-input" placeholder="Search Products">
+            <span class="material-icons-outlined absolute top-0 left-0">
+                search
+            </span>
         </div>
-   </div>
+        <nav class="navigation">
+            <ul class="list-non-bullet d-flex align-center gap">
+                <!-- <li class="list-item-inline">
+                    <a href="/" class="link cursor">Home</a>
+                </li> -->
+                <li class="list-item-inline">
+                    <a href="/" class="link cursor">
+                        <span class="nav-icon material-icons-outlined">
+                            favorite_border
+                        </span></a>
+                </li>
+                <li class="list-item-inline">
+                    <a href="/" class="link cursor"><span class="material-icons-outlined">
+                        shopping_cart
+                    </span></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="products-page d-flex wrap gap" id="products"></div>
+   
+   
    <script type="module" src="./index.js"></script>
 </body>
 </html>
